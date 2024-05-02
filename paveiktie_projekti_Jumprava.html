@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="lv">
+<title>JUMPRAVA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet_1.css">
+
+<body>
+
+<!-- Izvēlne -->
+<div class="d-top">
+  <div class="d-bar d-grey d-card">
+    <a class="d-bar-item d-poga d-padding-liels d-right"></a>
+    <a href="Sakuma_lapa.html" class="d-bar-item d-poga d-padding-liels">Sākums</a>
+    <a href="jaunie_projekti.html" class="d-bar-item d-poga d-padding-liels">Aktualitātes</a>
+    <div class="d-izvele-hover">
+      <poga class="d-padding-liels d-poga" title="Arhivs">Pasākumu arhīvs</poga>     
+      <div class="d-izvele-content d-bar-block d-card-4">
+        <a href="paveiktie_projekti_Perkons.html" class="d-bar-item d-poga">Grupas "Pērkons" koncerts</a>
+        <a href="paveiktie_projekti_Skyforger.html" class="d-bar-item d-poga">Grupas "Skyforger"koncerts</a>
+        <a href="paveiktie_projekti_Jumprava.html" class="d-bar-item d-poga">Grupas "Jumprava" koncerts</a>
+      </div>
+    </div>
+	<a href="sazinies.html" class="d-bar-item d-poga d-padding-liels"  >Kontakti</a>
+  </div>
+</div>
+
+<!-- Lapas saturs -->
+<div class="d-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Slideshow bildes -->
+  <div class="mySlides d-display-container d-center">
+    <img src="atteli/J_2.jpg" style="width:50%">
+	</div>
+  </div>
+  <div class="mySlides d-display-container d-center">
+    <img src="atteli/J_1.jpg" style="width:50%">  
+	</div>
+  </div>
+  <div class="mySlides d-display-container d-center">
+    <img src="atteli/J_3.jpg" style="width:50%">
+    </div>
+	</div>
+	<div class="mySlides d-display-container d-center">
+    <img src="atteli/J_4.jpg" style="width:50%">
+    </div>
+  </div>
+
+  <!-- Apraksts -->
+  <div class="d-container d-content d-center d-padding-64" style="max-width:800px" id="Par">
+    <h2 class="d-wide">Grupas JUMPRAVA koncerts PA VĒJAM</h2>
+    <p class="d-opacity">2020. gada 19. septembris, 19:00. Jelgava, brīvdabas koncertzāle MĪTAVA, pasta salā. </p>
+	<p class="d-opacity">2020. gada 5. septembris, 19:00. Rojas brīvdabas estrāde. </p>
+    <p class="d-izlidzinats">Mūzikas grupa “Jumprava”, kura pagājušajā rudenī atzīmēja savu 35. jubileju, pēdējos gados koncertus sniedz reti. 
+	<br>Tāpēc katra viņu uzstāšanās ir dvēseles baudījums ikvienam grupas fanam un viņu mūzikas cienītājiem. 
+	Koncertzāle "Mītava" ir viena no retajām vietām, kur šogad uzstāsies “Jumprava”. 
+	Koncertā skanēs visiem zināmās dziesmas: “Ziemeļmeita”, “Peldētājs”, “Ēnas”, “Vēlreiz”, 
+	“Pa vējam”, “Lēna upe”, “Nedaudz par viņu” u.c. tautā iemīļotas dziesmas.</p>
+<p><pre>
+<em>Es eju pa sen zināmu ielu;
+Varbūt kādreiz šo ielu savādāk sauks.
+Kāds Rolls-Roiss garām aizbrauks tālāk kaut kur uz priekšu, kur iešu.
+Man sen zināmā valodā kāds mani sauks.
+Un es iešu uz priekšu, varbūt no prieka pat kliegšu.
+Man sen zināmā valodā kāds mani sauks.</em>
+</pre>
+	<div class="d-row d-padding-32">
+	<h3 class="d-wide d-left">Grupas dalībnieki</h2>
+  <ol class="d-wide d-left">
+  <li>Aigars Grāvers</li>
+  <li>Aigars Krēsla</li>
+  <li>Aigars Grauba</li>
+  <li>Ainārs Ašmanis</li>
+</ol>
+</div>
+	  <div class="d-row d-padding-32">
+      <div class="d-third">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uTsO_OGXSuE" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+	 </div>
+ 
+<!-- Footer -->
+<footer class="d-container d-padding-32 d-center d-opacity d-light-grey d-xliels">
+ <a href="https://www.facebook.com/latvijaskulturalv"target="_blank">Facebook lapa</a>.
+ <a href="https://www.bilesuparadize.lv/lv/event/83487"target="_blank">Biļešu paradīze</a>.
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+</script>
+</body>
+</html>

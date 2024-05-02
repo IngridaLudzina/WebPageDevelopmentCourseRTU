@@ -1,0 +1,87 @@
+body {background-image:url("atteli/fons.jpg")}
+
+/* izklājuma kastites nosacijumi */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit} 
+footer,header,main,menu,nav,section{display:block;background-color:grayscale-min}summary{display:list-item}
+html{overflow-x:scroll}
+.d-content{margin-left:auto;margin-right:auto;max-width:980px}
+.d-container{padding:0.01em 16px}
+.d-border{border:1px solid #ccc}
+.d-section{margin-top:16px;margin-bottom:16px}
+.d-margin-bottom{margin-bottom:16px}
+.left { float:left; width: 50%; }
+.right { float:right;  width: 40%;}
+ aside, section { padding: 2px; background-color: #ccc; }
+
+/* fonts */
+* {font-family:garamond}
+html,body{font-size:18px;line-height:1.2}
+
+/* paragrāfa teksts */
+p {color:#000;font-weight:bold;text-align:justify} /* melns */
+.d-opacity {color:#000;text-align:center;font-weight:bold;opacity:0.75}
+.d-wide{letter-spacing:2px}
+.d-left-align{text-align:left}
+.d-right-align{text-align:right}
+.d-izlidzinats{text-align:izlidzinats}
+.d-center{text-align:center}
+.d-2000{max-width:2000px;margin-top:46px}
+.d-800 {max-width:800px}
+
+/* virsraksti */
+h2{font-size:30px;color:#ff0000;font-weight:bold;margin:10px 0;border: 1px solid red;border-radius: 5px;} /* sarkans */
+h3{font-size:24px;color:#9e9e9e} /* tumši pelēks */
+
+pre{font-size:15px}/* pantiņš */
+hr{box-sizing:content-box;height:0;overflow:visible;border:0;border-top:1px solid #FF0000;margin:20px 0} /* paragrāfu atdalītājs */
+poga,input{font:inherit;margin:0;overflow:visible}poga{text-transform:none}
+.d-bilde-kr {float:left;.d-row-padding}
+.d-bilde-lab {float:right;.d-row-padding}
+   
+/* izvēlnes izskats */
+.d-poga{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;font-weight:bold;cursor:pointer;white-space:nowrap}
+.d-izvele-hover{position:relative;display:inline-block;cursor:pointer} 
+.d-izvele-hover:hover .d-izvele-content{display:block}
+.d-izvele-hover:first-child
+.d-izvele-hover:hover > .d-poga:first-child{background-color:#ccc;color:#000}/* gaiši pelēks un melns   */
+.d-izvele-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1} /* melns un balts */
+.d-bar-block .d-izvele-hover,.d-bar-block .d-izvele-click{width:100%}
+.d-bar-block .d-izvele-hover .d-izvele-content,.d-bar-block .d-izvele-click {min-width:100%}
+.d-bar-block .d-izvele-hover .d-poga,.d-bar-block .d-izvele-click{width:100%;text-align:left;padding:8px 16px}
+.d-bar{width:100%;overflow:hidden}
+.d-center .d-bar{display:inline-block;width:auto}
+.d-bar .d-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.d-bar .d-izvele-hover,.d-bar .d-izvele-click{position:static;float:left}
+.d-bar .d-poga{white-space:normal}
+.d-bar-block .d-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.d-bar-block.d-center .d-bar-item{text-align:center}
+.d-container:after,.d-container:before,.d-panel:after,.d-panel:before,.d-row:after,.d-row:before,.d-row-padding:after,.d-row-padding:before,
+.d-cell-row:before,.d-cell-row:after,.d-clear:after,.d-clear:before,.d-bar:before,.d-bar:after{content:"";display:table;clear:both}
+.d-col,.d-half,.d-third,.d-twothird,.d-threequarter,.d-quarter{float:left;width:100%}
+.d-col.s1{width:33.33333%}
+.d-col.s2{width:33.3333%}
+.d-col.s3{width:33.333%}
+.d-fixed {position: fixed;top: 0px;left: 0px;}
+
+/* izskata pielāgošanās ekrānam */
+@media (min-width:601px){.d-col.m1{width:8.33333%}.d-col.m2{width:16.66666%}.d-col.m3,.d-quarter{width:24.99999%}.d-col.m4,.d-third{width:33.33333%}
+.d-col.m5{width:41.66666%}.d-col.m6,.d-half{width:49.99999%}.d-col.m7{width:58.33333%}.d-col.m8,.d-twothird{width:66.66666%}
+.d-col.m9,.d-threequarter{width:74.99999%}.d-col.m10{width:83.33333%}.d-col.m11{width:91.66666%}.d-col.m12{width:99.99999%}}
+@media (min-width:993px){.d-col.l1{width:8.33333%}.d-col.l2{width:16.66666%}.d-col.l3{width:24.99999%}.d-col.l4{width:33.33333%}
+.d-col.l5{width:41.66666%}.d-col.l6{width:49.99999%}.d-col.l7{width:58.33333%}.d-col.l8{width:66.66666%}
+.d-col.l9{width:74.99999%}.d-col.l10{width:83.33333%}.d-col.l11{width:91.66666%}.d-col.l12{width:99.99999%}}
+.d-card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}/* melns */
+.d-card-4{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}/* melns */
+.d-hide{display:none}
+.d-top{position:fixed;width:100%;z-index:1;top:0}
+
+.d-row-padding{padding:0 8px}
+.d-padding-liels{padding:12px 24px}
+.d-padding-32{padding-top:32px;padding-bottom:32px}
+.d-padding-64{padding-top:64px;padding-bottom:64px}
+.d-left{float:left; text-align:left}
+.d-right{float:right}
+.d-poga:hover{color:#000;background-color:#ccc} /* melns un gaiši pelēks */
+.d-black{color:#fff;background-color:#000}/* balts un melns */
+.d-grey{color:#000;background-color:#9e9e9e}/* melns un tumši pelēks */
+.d-light-grey{color:#000;background-color:#f1f1f1}/* melns un ļoti gaiši pelēks */
