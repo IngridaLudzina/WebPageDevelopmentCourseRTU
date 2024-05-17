@@ -1,33 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 7 - CSS Grid</title>
-  <link rel="stylesheet" href="styles/day7_css_grid.css">
-</head>
+<html lang="lv">
+<title>Sākums</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet_1.css">
 
 <body>
-  <header>
-    <h1>Day 7 - CSS Grid</h1>
-    <h2>CSS Grid Resources</h2>
-    <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN CSS Grid Layout</a></li>
-      <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks - Complete Guide to Grid</a>
-      </li>
-      <li><a href="https://gridbyexample.com/">Grid by Example</a></li>
-    </ul>
 
-  </header>
-  <div class="container">
-    <div class="box box-1">Box 1 - Header</div>
-    <div class="box box-2">Box 2 - Main content</div>
-    <div class="box box-3">Box 3 - My footer</div>
-    <div class="box box-4">Box 4 - My Sidebar</div>
-    <div class="box box-5">Box 5 - My article</div>
-    <div class="box box-6">Box 6 - My navigation</div>
+<!-- Izvēlne -->
+<div class="d-top">
+  <div class="d-bar d-grey d-card">
+    <a class="d-bar-item d-button d-padding-liels d-right"></a>
+    <a href="Sakuma_lapa.html" class="d-bar-item d-button d-padding-liels">Sākums</a>
+    <a href="jaunie_projekti.html" class="d-bar-item d-button d-padding-liels">Aktualitātes</a>
+    <div class="d-izvele-hover">
+      <button class="d-padding-liels d-button" title="Arhivs">Pasākumu arhīvs</button>     
+      <div class="d-izvele-content d-bar-block d-card-4">
+        <a href="paveiktie_projekti_Perkons.html" class="d-bar-item d-button">Grupas "Pērkons" koncerts</a>
+        <a href="paveiktie_projekti_Skyforger.html" class="d-bar-item d-button">Grupas "Skyforger"koncerts</a>
+        <a href="paveiktie_projekti_Jumprava.html" class="d-bar-item d-button">Grupas "Jumprava" koncerts</a>
+      </div>
+    </div>
+	<a href="sazinies.html" class="d-bar-item d-button d-padding-liels"  >Kontakti</a>
   </div>
+</div>
+
+<!-- Lapas saturs -->
+<div class="d-content d-2000">
+
+  <!-- Slideshow bildes -->
+   <div class="mySlides d-center">
+    <img src="atteli/Logo.png" alt="Logo" style="width:50%">
+	</div>
+	 </div>
+	 
+  <div class="mySlides d-center">
+    <img src="atteli/Par_mums_2.jpg" alt="Par mums" style="width:50%">
+	</div>
+  </div>
+  
+  <div class="mySlides d-center">
+    <img src="atteli/Par_mums_1.jpg" alt="Par mums" style="width:50%"> 
+	</div>
+  </div>
+  
+  <div class="mySlides d-center">
+    <img src="atteli/Par_mums_3.jpg" alt="Par mums" style="width:50%">
+    </div>
+  </div>
+  
+  <!-- Apraksts -->
+  <div class="d-container d-content d-center d-padding-64 d-800" id="Par">
+    <h2 class="d-wide">Koncertaģentūra "Latvijas Kultūra"</h2>
+    <p class="d-opacity">Koncertaģentūra "Latvijas Kultūra" jau vairāku gadu garumā oranizē dažādus Latvijas mākslinieku koncertus, izceļot dažāda žanra Latvijas mūzikas pērles.</p>
+    <p class="d-izlidzinats">Mēraukla ikvienam mūsu darbam. Neatkarīgi no tā, cik liels vai mazs būs radītais projekts, tas vienmēr būs kvalitatīvs. Mums ir svarīgi, lai skatītājs būtu pavadījis labāko vakaru savā mūžā.</p>
+	<p class="d-izlidzinats">Attieksme un profesionāla pieeja ikvienai detaļai. Tādi esam paši un to sagaidām arī no citiem. Tādēļ arī sadarbojamies ar Latvijas labākajiem māksliniekiem, kuri katrs ir savas jomas Meistari.</p>
+    <div class="d-row d-padding-32">
+	<h3 class="d-wide d-center">Mūsu vērtības!</h2>
+      <div class="d-third">
+        <p>Kvalitāte</p>
+        <img src="atteli/kvalitate.jpg" alt="kvalitate" class="d-margin-bottom" style="width:70%">
+      </div>
+      <div class="d-third">
+        <p>Sirsnība</p>
+        <img src="atteli/sirsniba.jpg" alt="sirsniba" class="d-margin-bottom" style="width:80%">
+      </div>
+      <div class="d-third">
+        <p>Cilvēcīgums</p>
+        <img src="atteli/cilveciba.jpg" alt="cilveciba" class="d-margin-bottom" style="width:70%">
+      </div>
+    </div>
+  </div>
+ 
+<!-- Footer -->
+<footer class="d-container d-padding-32 d-center d-opacity d-light-grey">
+ <a href="https://www.facebook.com/latvijaskulturalv"target="_blank">Facebook lapa</a>.
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+</script>
+
 </body>
+</html>
 
 </html>
