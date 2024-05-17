@@ -23,7 +23,7 @@ p {color:#000;font-weight:bold;text-align:justify} /* melns */
 .d-wide{letter-spacing:2px}
 .d-left-align{text-align:left}
 .d-right-align{text-align:right}
-.d-izlidzinats{text-align:izlidzinats}
+.d-align{text-align:align}
 .d-center{text-align:center}
 .d-2000{max-width:2000px;margin-top:46px}
 .d-800 {max-width:800px}
@@ -35,23 +35,23 @@ h3{font-size:24px;color:#9e9e9e} /* tumši pelēks */
 pre{font-size:15px}/* pantiņš */
 hr{box-sizing:content-box;height:0;overflow:visible;border:0;border-top:1px solid #FF0000;margin:20px 0} /* paragrāfu atdalītājs */
 button,input{font:inherit;margin:0;overflow:visible}button{text-transform:none}
-.d-bilde-kr {float:left;.d-row-padding}
-.d-bilde-lab {float:right;.d-row-padding}
+.d-photo-kr {float:left;.d-row-padding}
+.d-photo-lab {float:right;.d-row-padding}
    
 /* izvēlnes izskats */
 .d-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;font-weight:bold;cursor:pointer;white-space:nowrap}
-.d-izvele-hover{position:relative;display:inline-block;cursor:pointer} 
-.d-izvele-hover:hover .d-izvele-content{display:block}
-.d-izvele-hover:first-child
-.d-izvele-hover:hover > .d-button:first-child{background-color:#ccc;color:#000}/* gaiši pelēks un melns   */
-.d-izvele-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1} /* melns un balts */
-.d-bar-block .d-izvele-hover,.d-bar-block .d-izvele-click{width:100%}
-.d-bar-block .d-izvele-hover .d-izvele-content,.d-bar-block .d-izvele-click {min-width:100%}
-.d-bar-block .d-izvele-hover .d-button,.d-bar-block .d-izvele-click{width:100%;text-align:left;padding:8px 16px}
+.d-menu-hover{position:relative;display:inline-block;cursor:pointer} 
+.d-menu-hover:hover .d-menu-content{display:block}
+.d-menu-hover:first-child
+.d-menu-hover:hover > .d-button:first-child{background-color:#ccc;color:#000}/* gaiši pelēks un melns   */
+.d-menu-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1} /* melns un balts */
+.d-bar-block .d-menu-hover,.d-bar-block .d-menu-click{width:100%}
+.d-bar-block .d-menu-hover .d-menu-content,.d-bar-block .d-menu-click {min-width:100%}
+.d-bar-block .d-menu-hover .d-button,.d-bar-block .d-menu-click{width:100%;text-align:left;padding:8px 16px}
 .d-bar{width:100%;overflow:hidden}
 .d-center .d-bar{display:inline-block;width:auto}
 .d-bar .d-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
-.d-bar .d-izvele-hover,.d-bar .d-izvele-click{position:static;float:left}
+.d-bar .d-menu-hover,.d-bar .d-menu-click{position:static;float:left}
 .d-bar .d-button{white-space:normal}
 .d-bar-block .d-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
 .d-bar-block.d-center .d-bar-item{text-align:center}
