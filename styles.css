@@ -1,88 +1,361 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.container {
+display : grid;
+grid-template-columns : 20% 40% 35%;
+grid-template-rows : 2fr 4fr 10fr 2fr;
+gap : 2%;
+background-color : beige;
+padding : 5px;
+grid-template-areas : "my-header my-header my-header" "my-hero my-hero my-Ad" "my-body my-body my-sidebar" "my-footer my-footer my-footer";
 }
 
-body {
-    font-family: Arial, sans-serif;
+.box {
+display : inline-grid;
+background-color : lightcoral;
+border : black dashed 2px;
+border-radius : 5%;
+}
+.box-1 {
+grid-area : my-header;
+grid-template-columns : 19% 59% 19%;
+grid-template-rows : 90%;
+gap : 1%;
+grid-template-areas : "Brand Global-Nav Tools";
+background-color : lightblue;
+padding : 1em;
+}
+.box-1_1 {
+grid-area : Brand;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
+.box-1_2 {
+grid-area : Global-Nav;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
+.box-1_3 {
+grid-area : Tools;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
 }
 
-.header, .nav, .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
+.nested {
+border : #ffec99 solid 2px;
+border-radius : 5px;
+background-color : #fff9db;
+padding : 1em;
+bottom : 0;
 }
 
-.header {
-    grid-area: header;
+.box-2 {
+grid-area : my-hero;
+background-color : gainsboro;
+grid-template-columns : 60% 30%;
+grid-template-rows : 90%;
+gap : 3%;
+padding : 1em;
+grid-template-areas : "Hero-Feature Call-to-action";
 }
 
-.nav {
-    grid-area: nav;
+.box-2_1 {
+grid-area : Hero-Feature;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
+.box-2_2 {
+grid-area : Call-to-action;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
 }
 
-.footer {
-    grid-area: footer;
+.box-3 {
+grid-area : my-Ad;
+background-color : lightgreen;
+position : relative;
+}
+.box-3_1 {
+grid-area : my-Ad_min;
+background-color : lightgreen;
+position : relative;
 }
 
-.main-content {
+.box-4 {
+grid-area : my-body;
+background-color : lightpink;
+bottom : 0;
+grid-template-columns : 30% 60%;
+grid-template-rows : 90%;
+gap : 3%;
+grid-template-areas : "Article-Feature Article-Listing";
+padding : 1em;
+}
+.box-4_1 {
+grid-area : Article-Feature;
+background-color : gainsboro;
+}
+.box-4_2 {
+grid-area : Article-Listing;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
+
+.box-5 {
+grid-area : my-sidebar;
+background-color : lightyellow;
+padding : 1em;
+gap : 3%;
+grid-template-rows : 90%;
+grid-template-areas : "Sidebar-Feature";
+}
+
+.box-5_1 {
+grid-area : Sidebar-Feature;
+background-color : gainsboro;
+}
+
+.box-6 {
+grid-area : my-footer;
+background-color : linen;
+}
+
+@media screen and (min-width: 992px){
+  .container {
     display: grid;
+    grid-template-columns: 20% 40% 35%;
+    grid-template-rows: 2fr 4fr 10fr 2fr;
+    grid-gap: 2%;
+    background-color:beige;
+    padding: 5px;
+    grid-template-areas: 
+    "my-header my-header my-header"
+    "my-hero  my-hero my-Ad"
+    "my-body my-body my-sidebar"
+    "my-footer my-footer my-footer";
+}
+
+.box {
+    display: inline-grid;
+    background-color: lightcoral;
+    border: 2px dashed black;
+    border-radius: 5%;
+}
+.box-1 {
+    grid-area: my-header;
+    grid-template-columns: 19% 59% 19%;
+    grid-template-rows: 90%;
+    grid-gap: 1%;
     grid-template-areas:
-        "nav header header"
-        "nav content ad"
-        "footer footer footer";
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1em;
+    "Brand Global-Nav Tools";
+    background-color: lightblue;
+    padding: 1em ;
+}
+.box-1_1 {
+    grid-area: Brand;
+    background-color: gainsboro;
+    padding: 1em;
+    bottom: 0px;
+    }
+.box-1_2 {
+    grid-area: Global-Nav;
+    background-color: gainsboro;
+    padding: 1em;
+    bottom: 0px;
+}
+.box-1_3 {
+    grid-area: Tools;
+    background-color: gainsboro;
+    padding: 1em;
+    bottom: 0px;
+}
+
+.nested {
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
+  bottom: 0px;
+}
+
+.box-2 {
+    grid-area: my-hero;
+    background-color: gainsboro;
+    grid-template-columns: 60% 30%;
+    grid-template-rows: 90%;
+    grid-gap: 3%;
+    padding: 1em;  
+    grid-template-areas:
+    "Hero-Feature Call-to-action";
+}
+
+.box-2_1 {
+    grid-area: Hero-Feature;
+    background-color: gainsboro;
+    padding: 1em;
+    bottom: 0px;
+    }
+.box-2_2 {
+    grid-area: Call-to-action;
+    background-color: gainsboro;
+    padding: 1em;
+    bottom: 0px;
+    }
+
+.box-3 {
+    grid-area: my-Ad;
+    background-color: lightgreen;
+    position: relative;
+}
+.box-3_1 {
+    display: none;
+}
+
+.box-4 {
+    grid-area: my-body;
+    background-color: lightpink;
+    bottom: 0px;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: 90%;
+    grid-gap: 3%;
+    grid-template-areas:
+    "Article-Feature Article-Listing";
     padding: 1em;
 }
-
-.content {
-    grid-area: content;
-}
-
-.ad {
-    grid-area: ad;
-    background-color: #f1f1f1;
+.box-4_1 {
+    grid-area: Article-Feature;
+    background-color: gainsboro;
+   
+    }
+.box-4_2 {
+    grid-area: Article-Listing;
+    background-color: gainsboro;
     padding: 1em;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Breakpoints */
-@media (max-width: 991px) {
-    .main-content {
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "ad"
-            "footer";
-        grid-template-columns: 1fr;
+    bottom: 0px;
     }
 
-    .ad {
-        display: block;
+.box-5 {
+    grid-area: my-sidebar;
+    background-color: lightyellow;
+    padding: 1em;
+    grid-gap: 3%;
+    grid-template-rows: 90%;
+    grid-template-areas:
+    "Sidebar-Feature";
+}
+
+.box-5_1 {
+    grid-area: Sidebar-Feature;
+    background-color: gainsboro;
+    }
+
+.box-6 {
+    grid-area: my-footer;
+    background-color: linen;
+}
+  }
+@media screen and (max-width: 991px) {
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 2fr 4fr 10fr 4fr 2fr;
+      grid-gap: 2%;
+      grid-template-areas: 
+      "my-header"
+      "my-hero"
+      "my-body" 
+      "my-sidebar"
+      "my-footer";
+       grid-template-columns: 1fr;
+    }
+    .box-2 {
+    grid-area: my-hero;
+    background-color: gainsboro;
+    position: relative;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 45%;
+    grid-gap: 2%;
+    padding: 1em;  
+    grid-template-areas:
+    "Hero-Feature" 
+    "Call-to-action";
+    }
+    
+    .box-4 {
+    grid-area: my-body;
+    background-color: gainsboro;  
+    grid-template-columns: 75% 20%;
+    grid-template-rows: 20% 70%;
+    grid-gap: 2%;
+    padding: 1em;  
+    grid-template-areas:
+      "Article-Feature my-Ad_min" 
+      "Article-Listing Article-Listing";
+    }
+    .box-3 {
+     display: none;
     }
 }
 
-@media (max-width: 575px) {
-    .main-content {
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "footer";
-        grid-template-columns: 1fr;
+@media screen and (max-width: 575px) {
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 2fr 1fr 4fr 1fr;
+      grid-gap: 1%;
+      grid-template-areas: 
+      "my-header"
+      "my-hero"
+      "my-body" 
+      "my-footer";
+       grid-template-columns: 1fr;
     }
-
-    .ad {
-        display: none;
+    .box-1 {
+    grid-area: my-header;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 45% 45%;
+    grid-gap: 1%;
+    grid-template-areas:
+    "Brand Brand"
+    "Global-Nav Tools";
+    background-color: lightblue;
+    padding:1em;
+    }
+    .box-2 {
+    grid-area: my-hero;
+    background-color: gainsboro;
+    position: relative;
+    grid-template-columns: 100%;
+    grid-template-rows: 90%;
+    grid-gap: 3%;
+    padding: 1em;  
+    grid-template-areas:
+    "Call-to-action";
+    }
+    .box-2_1 {
+    display: none;
+    }
+  .box-3 {
+     display: none;
+    }
+    .box-4 {
+    grid-area: my-body;
+    background-color: gainsboro;  
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 50%;
+    grid-gap: 1%;
+    padding: 1em;  
+    grid-template-areas:
+      "Article-Feature"
+      "my-Ad_min"
+      "Article-Listing";
+    }
+  .box-5 {
+     display: none;
     }
 }
 
