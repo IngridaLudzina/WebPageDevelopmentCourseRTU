@@ -2,16 +2,16 @@
 display : grid;
 grid-template-columns : 20% 40% 35%;
 grid-template-rows : 2fr 4fr 10fr 2fr;
-gap : 2%;
-background-color : beige;
+gap : 0.5%;
+background-color: black;
 padding : 5px;
 grid-template-areas : "my-header my-header my-header" "my-hero my-hero my-Ad" "my-body my-body my-sidebar" "my-footer my-footer my-footer";
 }
 
 .box {
 display : inline-grid;
-background-color : lightcoral;
-border : black dashed 2px;
+background-color : #c0c0c0;
+border : none;
 border-radius : 5%;
 }
 .box-1 {
@@ -20,32 +20,31 @@ grid-template-columns : 19% 59% 19%;
 grid-template-rows : 90%;
 gap : 1%;
 grid-template-areas : "Brand Global-Nav Tools";
-background-color : lightblue;
 padding : 1em;
 }
 .box-1_1 {
 grid-area : Brand;
-background-color : gainsboro;
+background-color : #c0c0c0;
 padding : 1em;
 bottom : 0;
 }
 .box-1_2 {
 grid-area : Global-Nav;
-background-color : gainsboro;
+background-color : #c0c0c0;
 padding : 1em;
 bottom : 0;
 }
 .box-1_3 {
-grid-area : Tools;
-background-color : gainsboro;
+grid-area: Tools;
+background-color : #c0c0c0;
 padding : 1em;
 bottom : 0;
 }
 
 .nested {
-border : #ffec99 solid 2px;
+border : none;
 border-radius : 5px;
-background-color : #fff9db;
+background-color : #c0c0c0;
 padding : 1em;
 bottom : 0;
 }
@@ -75,8 +74,37 @@ bottom : 0;
 
 .box-3 {
 grid-area : my-Ad;
-background-color : lightgreen;
+background-color : #c0c0c0;
 position : relative;
+
+/* Full-width input fields */
+  input[type=text],       input[type=password] {
+  width: 80%;
+  padding: 5px;
+  margin: 5px 0 6px 0;
+  border: none;
+  background: #00ffff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #808080;
+  outline: none;
+}
+
+.btn {
+  background-color: #c0c0c0;
+  color: black;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: Garamont;
+}
+
+.btn:hover {
+  opacity: 5;
+}
 }
 .box-3_1 {
 grid-area : my-Ad_min;
@@ -126,138 +154,157 @@ background-color : linen;
 
 @media screen and (min-width: 992px){
   .container {
-    display: grid;
-    grid-template-columns: 20% 40% 35%;
-    grid-template-rows: 2fr 4fr 10fr 2fr;
-    grid-gap: 2%;
-    background-color:beige;
-    padding: 5px;
-    grid-template-areas: 
-    "my-header my-header my-header"
-    "my-hero  my-hero my-Ad"
-    "my-body my-body my-sidebar"
-    "my-footer my-footer my-footer";
+display : grid;
+grid-template-columns : 20% 40% 35%;
+grid-template-rows : 2fr 4fr 10fr 2fr;
+gap : 0.5%;
+background-color: black;
+padding : 5px;
+grid-template-areas : "my-header my-header my-header" "my-hero my-hero my-Ad" "my-body my-body my-sidebar" "my-footer my-footer my-footer";
 }
 
 .box {
-    display: inline-grid;
-    background-color: lightcoral;
-    border: 2px dashed black;
-    border-radius: 5%;
+display : inline-grid;
+background-color : #c0c0c0;
+border : none;
+border-radius : 5%;
 }
 .box-1 {
-    grid-area: my-header;
-    grid-template-columns: 19% 59% 19%;
-    grid-template-rows: 90%;
-    grid-gap: 1%;
-    grid-template-areas:
-    "Brand Global-Nav Tools";
-    background-color: lightblue;
-    padding: 1em ;
+grid-area : my-header;
+grid-template-columns : 19% 59% 19%;
+grid-template-rows : 90%;
+gap : 1%;
+grid-template-areas : "Brand Global-Nav Tools";
+padding : 1em;
 }
 .box-1_1 {
-    grid-area: Brand;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
-    }
+grid-area : Brand;
+background-color : #c0c0c0;
+padding : 1em;
+bottom : 0;
+}
 .box-1_2 {
-    grid-area: Global-Nav;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
+grid-area : Global-Nav;
+background-color : #c0c0c0;
+padding : 1em;
+bottom : 0;
 }
 .box-1_3 {
-    grid-area: Tools;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
+grid-area: Tools;
+background-color : #c0c0c0;
+padding : 1em;
+bottom : 0;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
-  bottom: 0px;
+border : none;
+border-radius : 5px;
+background-color : #c0c0c0;
+padding : 1em;
+bottom : 0;
 }
 
 .box-2 {
-    grid-area: my-hero;
-    background-color: gainsboro;
-    grid-template-columns: 60% 30%;
-    grid-template-rows: 90%;
-    grid-gap: 3%;
-    padding: 1em;  
-    grid-template-areas:
-    "Hero-Feature Call-to-action";
+grid-area : my-hero;
+background-color : gainsboro;
+grid-template-columns : 60% 30%;
+grid-template-rows : 90%;
+gap : 3%;
+padding : 1em;
+grid-template-areas : "Hero-Feature Call-to-action";
 }
 
 .box-2_1 {
-    grid-area: Hero-Feature;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
-    }
+grid-area : Hero-Feature;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
 .box-2_2 {
-    grid-area: Call-to-action;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
-    }
+grid-area : Call-to-action;
+background-color : gainsboro;
+padding : 1em;
+bottom : 0;
+}
 
 .box-3 {
-    grid-area: my-Ad;
-    background-color: lightgreen;
-    position: relative;
+grid-area : my-Ad;
+background-color : #c0c0c0;
+position : relative;
+
+/* Full-width input fields */
+  input[type=text],       input[type=password] {
+  width: 80%;
+  padding: 5px;
+  margin: 5px 0 6px 0;
+  border: none;
+  background: #00ffff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #808080;
+  outline: none;
+}
+
+.btn {
+  background-color: #c0c0c0;
+  color: black;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: Garamont;
+}
+
+.btn:hover {
+  opacity: 5;
+}
 }
 .box-3_1 {
     display: none;
 }
 
 .box-4 {
-    grid-area: my-body;
-    background-color: lightpink;
-    bottom: 0px;
-    grid-template-columns: 30% 60%;
-    grid-template-rows: 90%;
-    grid-gap: 3%;
-    grid-template-areas:
-    "Article-Feature Article-Listing";
-    padding: 1em;
+grid-area : my-body;
+background-color : #c0c0c0;
+bottom : 0;
+grid-template-columns : 30% 60%;
+grid-template-rows : 90%;
+gap : 3%;
+grid-template-areas : "Article-Feature Article-Listing";
+padding : 1em;
 }
 .box-4_1 {
-    grid-area: Article-Feature;
-    background-color: gainsboro;
-   
-    }
+grid-area : Article-Feature;
+background-color : #c0c0c0;
+}
 .box-4_2 {
-    grid-area: Article-Listing;
-    background-color: gainsboro;
-    padding: 1em;
-    bottom: 0px;
-    }
+grid-area : Article-Listing;
+background-color : #c0c0c0;
+padding : 1em;
+bottom : 0;
+}
 
 .box-5 {
-    grid-area: my-sidebar;
-    background-color: lightyellow;
-    padding: 1em;
-    grid-gap: 3%;
-    grid-template-rows: 90%;
-    grid-template-areas:
-    "Sidebar-Feature";
+grid-area : my-sidebar;
+background-color : #c0c0c0;
+padding : 1em;
+gap : 3%;
+grid-template-rows : 90%;
+grid-template-areas : "Sidebar-Feature";
 }
 
 .box-5_1 {
-    grid-area: Sidebar-Feature;
-    background-color: gainsboro;
-    }
+grid-area : Sidebar-Feature;
+background-color : #c0c0c0;
+}
 
 .box-6 {
-    grid-area: my-footer;
-    background-color: linen;
+grid-area : my-footer;
+background-color : #00ffff;
 }
-  }
+}
 @media screen and (max-width: 991px) {
     .container {
       display: grid;
@@ -298,6 +345,39 @@ background-color : linen;
     }
     .box-3 {
      display: none;
+    }
+  .box-3_1 {
+    grid-area : my-Ad_min;
+    background-color : #00ffff;
+    position : relative;
+  /* Full-width input fields */
+  input[type=text],       input[type=password] {
+  width: 80%;
+  padding: 5px;
+  margin: 5px 0 6px 0;
+  border: none;
+  background: #00ffff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #808080;
+  outline: none;
+}
+
+.btn {
+  background-color: #c0c0c0;
+  color: black;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: Garamont;
+}
+
+.btn:hover {
+  opacity: 5;
+}
     }
 }
 
@@ -359,25 +439,12 @@ background-color : linen;
     }
 }
 
-/* Button hover effect */
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-}
-
-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
 
 /* Navbar container */
 .navbar {
   overflow: hidden;
   background-color: #333;
-  font-family: Arial;
+  font-family: Garamont;
 }
 
 /* Links inside the navbar */
@@ -386,7 +453,7 @@ button:hover {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-decoration: none;
 }
 
@@ -404,13 +471,13 @@ button:hover {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; 
+  margin: 0; 
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #F0FFFF;
+  color: black;
 }
 
 /* Dropdown content (hidden by default) */
@@ -441,4 +508,10 @@ button:hover {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+ul.a {
+  list-style-type: circle;
+  text-align: left;
+  font-family: Garamont;
 }
