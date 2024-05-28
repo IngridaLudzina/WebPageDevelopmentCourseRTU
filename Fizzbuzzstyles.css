@@ -1,59 +1,125 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f06, #f0a);
+  color: #333;
 }
 
 .controls {
-    margin: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .controls label {
-    margin-right: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
 .controls input {
-    margin-right: 20px;
+  width: 120px;
+  padding: 8px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.controls input:focus {
+  border-color: #f06;
+  box-shadow: 0 0 5px rgba(240, 96, 96, 0.5);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #4CAF50, #388E3C);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#clearBtn {
+  background: linear-gradient(to bottom, #f44336, #d32f2f);
 }
 
 main {
-    display: grid;
-    gap: 5px;
-    width: 90%;
+  display: grid;
+  gap: 10px;
+  width: 90%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
 main div {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .fizz {
-    background-color: yellow;
+  background: linear-gradient(to bottom, #FFD700, #FFC700);
+  color: #000;
+  border-color: #FFC700;
 }
 
 .buzz {
-    background-color: lightblue;
+  background: linear-gradient(to bottom, #1E90FF, #1C86EE);
+  color: #fff;
+  border-color: #1C86EE;
 }
 
 .fizzbuzz {
-    background-color: lightgreen;
+  background: linear-gradient(to bottom, #32CD32, #2E8B57);
+  color: #fff;
+  border-color: #2E8B57;
 }
 
 .number {
-    background-color: lightgray;
-}
-
-@media (min-width: 600px) {
-    main {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  background: linear-gradient(to bottom, #D3D3D3, #C0C0C0);
+  color: #000;
+  border-color: #BEBEBE;
 }
 
 @media (min-width: 1024px) {
